@@ -1,0 +1,561 @@
+{
+  "author": "Juan Siro",
+  "description": "Module to do translations wit DeepL | Modulo para realizar traducciones con DeepL",
+  "description_lang":{
+    "en": "Translate words, texts and entire files using the DeepL API",
+    "es": "Traduce palabras, textos y archivos completos mediante la API de DeepL",
+    "pr": "Traduza palavras, textos e arquivos inteiros usando a API DeepL"
+  },
+  "disclaimer": "THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "homepage": "http://rocketbot.com/",
+  "linux": false,
+  "windows": true,
+  "mac": true,
+  "docker": false,
+  "dependencies": {
+  },
+  "name": "DeepL",
+  "title": {
+    "en": "DeepL",
+    "es": "DeepL",
+    "pr": "DeepL"
+  },
+  "icon": "data:image/png;base64,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",
+  "children": [
+    {
+      "en": {
+        "title": "Translate",
+        "description": "Translates text or a text, HTML, or XML file and stores the response in a variable.",
+        "title_options": null,
+        "options": null
+      },
+      "es": {
+        "title": "Traducir",
+        "description": "Traduce texto o un archivo de texto, HTML o XML y almacena la respuesta en una variable.",
+        "title_options": null,
+        "options": null
+      },
+      "pr": {
+        "title": "Traduzir",
+        "description": "Traduz texto ou arquivo de texto, HTML ou XML e armazena a resposta em uma variável.",
+        "title_options": null,
+        "options": null
+      },
+      "form": {
+        "css": "modal-lg",
+        "inputs": [
+          {
+            "type": "input",
+            "placeholder": {
+              "es": "279a2e9d-83b3-c416-7e2d-f721593e42a0:fx",
+              "en": "279a2e9d-83b3-c416-7e2d-f721593e42a0:fx",
+              "pr": "279a2e9d-83b3-c416-7e2d-f721593e42a0:fx"
+            },
+            "title": {
+              "es": "Auth Key",
+              "en": "Auth Key",
+              "pr": "Auth Key"
+            },
+            "description": {
+              "es": "Clave de autenticación de cuenta para acceder a la API",
+              "en": "Account authentication key to access the API",
+              "pr": "Chave de autenticação da conta para acessar a API"
+            },
+            "id": "api_key",
+            "css": "col-md-9"
+          },
+          {
+            "type": "select",
+            "placeholder": {
+              "es": "Seleccionar",
+              "en": "Select",
+              "pr": "Selecionar"
+            },
+            "title": {
+              "es": "Tipo de cuenta",
+              "en": "Account type",
+              "pr": "Tipo de conta"
+            },
+            "description": {
+              "es": "Plan de cuenta API REST",
+              "en": "REST API Account Plan",
+              "pr": "Plano de conta da API REST"
+            },
+            "options": [{"title": "FREE", "value": "free"}, {"title": "PRO", "value": "pro"}],
+            "id": "acc_type",
+            "css": "col-md-3"
+          },
+          {
+            "type": "textarea",
+            "placeholder": {
+              "es": "",
+              "en": "",
+              "pr": ""
+            },
+            "title": {
+              "es": "Texto",
+              "en": "Text",
+              "pr": "Texto"
+            },
+            "description": {
+              "es": "Texto a traducir.",
+              "en": "Text to translate.",
+              "pr": "Texto para traduzir."
+            },
+            "id": "text",
+            "css": "col-md-12"
+          },
+          {
+            "type": "file_select",
+            "placeholder": {
+              "es": "",
+              "en": "",
+              "pr": ""
+            },
+            "title": {
+              "es": "Ruta archivo XML/HTML (opcional)",
+              "en": "Path to XML/HTML file (optional)",
+              "pr": "Caminho do arquivo XML/HTML (opcional)"
+            },
+            "description": {
+              "es": "Ruta del archivo XML/HTML a traducir.",
+              "en": "Path of the XML/HTML file to translate.",
+              "pr": "Caminho do arquivo XML/HTML para traduzir."
+            },
+            "id": "path",
+            "css": "col-md-12"
+          },
+          {
+            "type": "select",
+            "placeholder": {
+              "es": "Seleccionar",
+              "en": "Select",
+              "pr": "Selecionar"
+            },
+            "title": {
+              "es": "Idioma objetivo",
+              "en": "Target language",
+              "pr": "Idioma alvo"
+            },
+            "description": {
+              "es": "Idioma al cual traducir.",
+              "en": "Language to translate to.",
+              "pr": "Idioma para traduzir."
+            },
+            "options": [{"title": "Bulgarian", "value": "BG"}, {"title": "Czech", "value": "CS"}, {"title": "Danish", "value": "DA"}, {"title": "German", "value": "DE"}, {"title": "Greek", "value": "EL"}, {"title": "English (unspecified variant for backward compatibility; please select EN-GB or EN-US instead)", "value": "EN"}, {"title": "English (British)", "value": "EN-GB"}, {"title": "English (American)", "value": "EN-US"}, {"title": "Spanish", "value": "ES"}, {"title": "Estonian", "value": "ET"}, {"title": "Finnish", "value": "FI"}, {"title": "French", "value": "FR"}, {"title": "Hungarian", "value": "HU"}, {"title": "Indonesian", "value": "ID"}, {"title": "Italian", "value": "IT"}, {"title": "Japanese", "value": "JA"}, {"title": "Korean", "value": "KO"}, {"title": "Lithuanian", "value": "LT"}, {"title": "Latvian", "value": "LV"}, {"title": "Norwegian (Bokmål)", "value": "NB"}, {"title": "Dutch", "value": "NL"}, {"title": "Polish", "value": "PL"}, {"title": "Portuguese (unspecified variant for backward compatibility; please select PT-BR or PT-PT instead)", "value": "PT"}, {"title": "Portuguese (Brazilian)", "value": "PT-BR"}, {"title": "Portuguese (all Portuguese varieties excluding Brazilian Portuguese)", "value": "PT-PT"}, {"title": "Romanian", "value": "RO"}, {"title": "Russian", "value": "RU"}, {"title": "Slovak", "value": "SK"}, {"title": "Slovenian", "value": "SL"}, {"title": "Swedish", "value": "SV"}, {"title": "Turkish", "value": "TR"}, {"title": "Ukrainian", "value": "UK"}, {"title": "Chinese (simplified)", "value": "ZH"}],
+            "id": "target",
+            "css": "col-md-12"
+          },
+          {
+            "type": "select",
+            "placeholder": {
+              "es": "Seleccionar",
+              "en": "Select",
+              "pr": "Selecionar"
+            },
+            "title": {
+              "es": "Dividir frases (opcional)",
+              "en": "Split sentences (optional)",
+              "pr": "Dividir frases (opcional)"
+            },
+            "options": [{"title": "No splitting", "value": 0}, {"title": "Split on punctuation and on newlines", "value": 1}, {"title": "Splits on punctuation only, ignore newlines", "value": "nonewlines"}],
+            "help": {
+              "es": "Establece si el motor de traducción debe dividir primero la entrada en oraciones.",
+              "en": "Sets whether the translation engine should first split the input into sentences.",
+              "pr": "Define se o mecanismo de tradução deve primeiro dividir a entrada em frases."
+            },
+            "description": {
+              "es": "Criterio para dividir frases.",
+              "en": "Criterion for dividing sentences.",
+              "pr": "Critério para divisão de sentenças."
+            },
+            "id": "split_sentences",
+            "css": "col-md-6"
+          },
+          {
+            "type": "checkbox",
+            "placeholder": {
+              "es": "",
+              "en": "",
+              "pr": ""
+            },
+            "title": {
+              "es": "Preservar formato (opcional)",
+              "en": "Preserve formatting (optional)",
+              "pr": "Preservar formatação (opcional)"
+            },
+            "help": {
+              "es": "Establece si el motor de traducción debe respetar el formato original, aunque normalmente corregiría algunos aspectos.",
+              "en": "Sets whether the translation engine should respect the original formatting, even if it would usually correct some aspects.",
+              "pr": "Define se o mecanismo de tradução deve respeitar a formatação original, mesmo que normalmente corrija alguns aspectos."
+            },
+            "description": {
+              "es": "Respeta el formato original o deja que el motor corrija algunos aspectos: Puntuación al principio y al final de la frase; Mayúsculas/minúsculas al comienzo de la oración.",
+              "en": "Respects original format or let the engine correct some aspects: Punctuation at the beginning and end of the sentence; Upper/lower case at the beginning of the sentence.",
+              "pr": "Respeita o formato original ou deixa o motor corrigir alguns aspectos: Pontuação no início e no final da frase; Maiúsculas/minúsculas no início da frase."
+            },
+            "id": "preserve_formatting",
+            "css": "col-md-6"
+          },
+          {
+            "type": "checkbox",
+            "placeholder": {
+              "es": "",
+              "en": "",
+              "pr": ""
+            },
+            "title": {
+              "es": "Formalidad (opcional)",
+              "en": "Formality (optional)",
+              "pr": "Formalidade (opcional)"
+            },
+            "options": [{"title": "Default", "value": "default "}, {"title": "More", "value": "more"}, {"title": "Less", "value": "less"}, {"title": "Prefer More", "value": "prefer_more"}, {"title": "Prefer Less", "value": "prefer_less"}],
+            "help": {
+              "es": "Establece si el texto traducido debe inclinarse hacia un lenguaje formal o informal.",
+              "en": "Sets whether the translated text should lean towards formal or informal language.",
+              "pr": "Define se o texto traduzido deve tender para uma linguagem formal ou informal."
+            },
+            "description": {
+              "es": "Establece si el texto traducido debe inclinarse hacia un lenguaje formal o informal.",
+              "en": "Sets whether the translated text should lean towards formal or informal language.",
+              "pr": "Define se o texto traduzido deve tender para uma linguagem formal ou informal."
+            },
+            "id": "formality",
+            "css": "col-md-12"
+          },
+          {
+            "type": "select",
+            "placeholder": {
+              "es": "Seleccionar",
+              "en": "Select",
+              "pr": "Selecionar"
+            },
+            "title": {
+              "es": "Etiquetas a manejar (opcional)",
+              "en": "Tags to handle (optional)",
+              "pr": "Rótulos para lidar (opcional)"
+            },
+            "description": {
+              "es": "Por defecto, el motor de traducción no tiene en cuenta las etiquetas XML/HTML. Al configurar el parámetro, la API procesará la entrada extrayendo texto de la estructura, dividiéndolo en oraciones individuales, traduciéndolas y colocándolas nuevamente en la estructura.",
+              "en": "By default, the translation engine does not take XML/HTML tags into account. By setting the parameter, the API will process input by extracting text out of the structure, splitting it into individual sentences, translating them, and placing them back into the structure.",
+              "pr": "Por padrão, o mecanismo de tradução não leva em consideração tags XML/HTML. Ao definir o parâmetro, a API processará a entrada extraindo o texto da estrutura, dividindo-o em frases individuais, traduzindo-as e colocando-as de volta na estrutura."
+            },
+            "options": [{"title": "XML", "value": "xml"}, {"title": "HTML", "value": "html"}],
+            "help": {
+              "es": "Establece qué tipo de etiquetas se deben manejar.",
+              "en": "Sets which kind of tags should be handled.",
+              "pr": "Define que tipo de rótulos devem ser manipuladas."
+            },
+            "id": "tag_handling",
+            "css": "col-md-6"
+          },
+          {
+            "type": "checkbox",
+            "placeholder": {
+              "es": "",
+              "en": "",
+              "pr": ""
+            },
+            "title": {
+              "es": "Detección automatica de estructura (opcional)",
+              "en": "Automatic structure detection (optional)",
+              "pr": "Detecção automática de estrutura (opcional)"
+            },
+            "help": {
+              "es": "Establece la detección automática de etiquetas de estructura (Mas adecuado para HTML)",
+              "en": "Sets automatic detection of structure tags (Best suitable for HTML)",
+              "pr": "Define a detecção automática de tags de estrutura (mais adequado para HTML)"
+            },
+            "description": {
+              "es": "Usar detección automática de la estructura del motor.",
+              "en": "Use engine authomatic detection of the struture.",
+              "pr": "Use a detecção automática da estrutura pelo motor."
+            },
+            "id": "outline_detection",
+            "css": "col-md-6"
+          },
+          {
+            "type": "input",
+            "placeholder": {
+              "es": "['p'] > HTML ['document','content'] > XML",
+              "en": "['p'] > HTML ['document','content'] > XML",
+              "pr": "['p'] > HTML ['document','content'] > XML"
+            },
+            "title": {
+              "es": "Etiquetas que no dividen (opcional)",
+              "en": "Non splitting tags (optional)",
+              "pr": "Tags sem divisão (opcional)"
+            },
+            "help": {
+              "es": "Establece etiquetas que no significan división de texto",
+              "en": "Sets tags that not mean text splitting",
+              "pr": "Define tags que não significam divisão de texto"
+            },
+            "description": {
+              "es": "Las etiquetas especificadas no se consideran como separadores de texto.",
+              "en": "The specified tags are not considered as text separators.",
+              "pr": "As tags especificadas não são consideradas separadores de texto."
+            },
+            "id": "non_splitting_tags",
+            "css": "col-md-6"
+          },
+          {
+            "type": "input",
+            "placeholder": {
+              "es": "['tr', 'div'] > HTML ['title','pal'] > XML",
+              "en": "['tr', 'div'] > HTML ['title','pal'] > XML",
+              "pr": "['tr', 'div'] > HTML ['title','pal'] > XML"
+            },
+            "title": {
+              "es": "Etiquetas que no dividen (opcional)",
+              "en": "Non splitting tags (optional)",
+              "pr": "Tags sem divisão (opcional)"
+            },
+            "help": {
+              "es": "Establece etiquetas que significan división de texto",
+              "en": "Sets tags that mean text splitting",
+              "pr": "Define tags que significam divisão de texto"
+            },
+            "description": {
+              "es": "Las etiquetas especificadas se consideran separadores de texto.",
+              "en": "The specified tags are considered text separators.",
+              "pr": "As tags especificadas são consideradas separadores de texto."
+            },
+            "id": "splitting_tags",
+            "css": "col-md-6"
+          },
+          {
+            "type": "input",
+            "placeholder": {
+              "es": "['a'] > HTML ['meta'] > XML",
+              "en": "['a'] > HTML ['meta'] > XML",
+              "pr": "['a'] > HTML ['meta'] > XML"
+            },
+            "title": {
+              "es": "Etiquetas a ignorar (opcional)",
+              "en": "Tags to ignore (optional)",
+              "pr": "Tags para ignorar (opcional)"
+            },
+            "help": {
+              "es": "Establece etiquetas a ignorar.",
+              "en": "Sets tags to ignored.",
+              "pr": "Define tags para ignorar."
+            },
+            "description": {
+              "es": "Las etiquetas especificadas seran ignoran en la traducción.",
+              "en": "The specified tags will be ignored in the translation.",
+              "pr": "As tags especificadas serão ignoradas na tradução."
+            },
+            "id": "ignore_tags",
+            "css": "col-md-6"
+          },
+          {
+            "type": "input",
+            "placeholder": {
+              "es": "traduccion",
+              "en": "traslation",
+              "pr": "tradução"
+            },
+            "title": {
+              "es": "Asignar resultado a variable",
+              "en": "Assign result to variable: ",
+              "pr": "Atribuir resultado a variável:"
+            },
+            "help": {
+              "es": "La variable debe ir sin llaves {}",
+              "en": "var without {}",
+              "pr": "A variável deve ir sem chaves {}"
+            },
+            "description": {
+              "es": "Variable donde se almacenara el resultado.",
+              "en": "Variable where the result will be stored.",
+              "pr": "Variável onde o resultado será armazenado."
+            },
+            "remove_vars": true,
+            "id": "var_",
+            "css": "col-md-6"
+          }
+        ]
+      },
+      "video_youtube": "",
+      "icon": "data:image/png;base64,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",
+      "module": "translate",
+      "module_name": "DeepL",
+      "visible": true,
+      "options": false,
+      "father": "module",
+      "group": "scripts",
+      "linux": false,
+      "windows": true,
+      "mac": true,
+      "docker": true
+    },
+    {
+      "en": {
+        "title": "Translate Document",
+        "description": "Translates docx, pptx, pdf, htm / html, txt or xlf / xliff files.",
+        "title_options": null,
+        "options": null
+      },
+      "es": {
+        "title": "Traducir documento",
+        "description": "Traducir archivos docx, pptx, pdf, htm/html, txt o xlf/xliff.",
+        "title_options": null,
+        "options": null
+      },
+      "pr": {
+        "title": "Traduzir documento",
+        "description": "Traduz arquivos docx, pptx, pdf, htm/html, txt ou xlf/xliff.",
+        "title_options": null,
+        "options": null
+      },
+      "form": {
+        "css": "modal-lg",
+        "inputs": [
+          {
+            "type": "input",
+            "placeholder": {
+              "es": "279a2e9d-83b3-c416-7e2d-f721593e42a0:fx",
+              "en": "279a2e9d-83b3-c416-7e2d-f721593e42a0:fx",
+              "pr": "279a2e9d-83b3-c416-7e2d-f721593e42a0:fx"
+            },
+            "title": {
+              "es": "Auth Key",
+              "en": "Auth Key",
+              "pr": "Auth Key"
+            },
+            "description": {
+              "es": "Clave de autenticación de cuenta para acceder a la API.",
+              "en": "Account authentication key to access the API.",
+              "pr": "Chave de autenticação da conta para acessar a API."
+            },
+            "id": "api_key",
+            "css": "col-md-9"
+          },
+          {
+            "type": "select",
+            "placeholder": {
+              "es": "Seleccionar",
+              "en": "Select",
+              "pr": "Selecionar"
+            },
+            "title": {
+              "es": "Tipo de cuenta",
+              "en": "Account type",
+              "pr": "Tipo de conta"
+            },
+            "description": {
+              "es": "Plan de cuenta API REST.",
+              "en": "REST API Account Plan.",
+              "pr": "Plano de conta da API REST."
+            },
+            "options": [{"title": "FREE", "value": "free"}, {"title": "PRO", "value": "pro"}],
+            "id": "acc_type",
+            "css": "col-md-3"
+          },
+          {
+            "type": "file_select",
+            "placeholder": {
+              "es": "",
+              "en": "",
+              "pr": ""
+            },
+            "description": {
+              "es": "Ruta del archivo a traducir.",
+              "en": "Path of the file to translate.",
+              "pr": "Caminho do arquivo a ser traduzido."
+            },
+            "title": {
+              "es": "Ruta del archivo",
+              "en": "Path to file",
+              "pr": "Caminho do arquivo"
+            },
+            "id": "path",
+            "css": "col-md-12"
+          },
+          {
+            "type": "file_select",
+            "placeholder": {
+              "es": "",
+              "en": "",
+              "pr": ""
+            },
+            "description": {
+              "es": "Ruta donde se guardará el archivo traducido.",
+              "en": "Path where the translated file will be saved.",
+              "pr": "Caminho onde o arquivo traduzido será salvo."
+            },
+            "title": {
+              "es": "Ruta guardado",
+              "en": "Saving path",
+              "pr": "Salvar caminho"
+            },
+            "id": "save_path",
+            "css": "col-md-12"
+          },
+          {
+            "type": "select",
+            "placeholder": {
+              "es": "Seleccionar",
+              "en": "Select",
+              "pr": "Selecionar"
+            },
+            "title": {
+              "es": "Idioma objetivo",
+              "en": "Target language",
+              "pr": "Idioma alvo"
+            },
+            "description": {
+              "es": "Idioma al cual traducir.",
+              "en": "Language to translate to.",
+              "pr": "Idioma para traduzir."
+            },
+            "options": [{"title": "Bulgarian", "value": "BG"}, {"title": "Czech", "value": "CS"}, {"title": "Danish", "value": "DA"}, {"title": "German", "value": "DE"}, {"title": "Greek", "value": "EL"}, {"title": "English (unspecified variant for backward compatibility; please select EN-GB or EN-US instead)", "value": "EN"}, {"title": "English (British)", "value": "EN-GB"}, {"title": "English (American)", "value": "EN-US"}, {"title": "Spanish", "value": "ES"}, {"title": "Estonian", "value": "ET"}, {"title": "Finnish", "value": "FI"}, {"title": "French", "value": "FR"}, {"title": "Hungarian", "value": "HU"}, {"title": "Indonesian", "value": "ID"}, {"title": "Italian", "value": "IT"}, {"title": "Japanese", "value": "JA"}, {"title": "Korean", "value": "KO"}, {"title": "Lithuanian", "value": "LT"}, {"title": "Latvian", "value": "LV"}, {"title": "Norwegian (Bokmål)", "value": "NB"}, {"title": "Dutch", "value": "NL"}, {"title": "Polish", "value": "PL"}, {"title": "Portuguese (unspecified variant for backward compatibility; please select PT-BR or PT-PT instead)", "value": "PT"}, {"title": "Portuguese (Brazilian)", "value": "PT-BR"}, {"title": "Portuguese (all Portuguese varieties excluding Brazilian Portuguese)", "value": "PT-PT"}, {"title": "Romanian", "value": "RO"}, {"title": "Russian", "value": "RU"}, {"title": "Slovak", "value": "SK"}, {"title": "Slovenian", "value": "SL"}, {"title": "Swedish", "value": "SV"}, {"title": "Turkish", "value": "TR"}, {"title": "Ukrainian", "value": "UK"}, {"title": "Chinese (simplified)", "value": "ZH"}],
+            "id": "target",
+            "css": "col-md-6"
+          },
+          {
+            "type": "input",
+            "placeholder": {
+              "es": "traduccion",
+              "en": "traslation",
+              "pr": "tradução"
+            },
+            "title": {
+              "es": "Asignar resultado a variable",
+              "en": "Assign result to variable: ",
+              "pr": "Atribuir resultado a variável:"
+            },
+            "help": {
+              "es": "La variable debe ir sin llaves {}",
+              "en": "var without {}",
+              "pr": "A variável deve ir sem chaves {}"
+            },
+            "description": {
+              "es": "Variable donde se almacenara el resultado.",
+              "en": "Variable where the result will be stored.",
+              "pr": "Variável onde o resultado será armazenado."
+            },
+            "remove_vars": true,
+            "id": "var_",
+            "css": "col-md-6"
+          }
+        ]
+      },
+      "video_youtube": "",
+      "icon": "data:image/png;base64,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",
+      "module": "translate_document",
+      "module_name": "DeepL",
+      "visible": true,
+      "options": false,
+      "father": "module",
+      "group": "scripts",
+      "linux": false,
+      "windows": true,
+      "mac": true,
+      "docker": true
+    }
+  ]
+}
